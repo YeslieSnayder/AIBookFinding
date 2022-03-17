@@ -51,10 +51,6 @@ public class AndreyKuzmickiy {
     private static Game getGameFromInput() throws IncorrectDataException {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             String input = reader.readLine();
-            if (input.equals("random"))
-                return getRandomGame();
-
-            String[] actors = input.split(" ");
             int scenario;
             try {
                 scenario = Integer.parseInt(reader.readLine());
@@ -62,6 +58,10 @@ public class AndreyKuzmickiy {
                 throw new IncorrectDataException("The input scenario must be integer (1 or 2)");
             }
 
+            if (input.isEmpty())
+                return getRandomGame(scenario);
+
+            String[] actors = input.split(" ");
             if (actors.length != 6)
                 throw new IncorrectDataException("The amount of input coordinates must be 6. Given " + actors.length);
             if (scenario != 1 && scenario != 2)
@@ -140,14 +140,14 @@ public class AndreyKuzmickiy {
      * @return Game object containing the random placed agents.
      * @throws IncorrectDataException when something went wrong. See message in exception.
      */
-    private static Game getRandomGame() throws IncorrectDataException {
+    private static Game getRandomGame(int scenario) throws IncorrectDataException {
         Random rand = new Random();
         ArrayList<Integer> possibleCells = new ArrayList<>();
         for (int i = 0; i < Game.SIZE * Game.SIZE; i++) {
             possibleCells.add(i);
         }
 
-        Harry harry = new Harry(0, 0, 1 + rand.nextInt(2));
+        Harry harry = new Harry(0, 0, scenario);
         possibleCells.remove(0);
 
         int cell = possibleCells.get(rand.nextInt(possibleCells.size()));
