@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class AndreyKuzmickiy {
+public class Main {
 
     /**
      * Main function of the application.
@@ -226,17 +226,6 @@ public class AndreyKuzmickiy {
         Book book = new Book(0, 1);
         Exit exit = new Exit(4, 3);
         Cat cat = new Cat(4, 8);
-
-        return new Game(harry, filch, cat, book, cloak, exit);
-    }
-
-    private static Game getInterestingField3(int scenario) throws IncorrectDataException {
-        Harry harry = new Harry(0, 0, scenario);
-        Filch filch = new Filch(5, 1);
-        Cloak cloak = new Cloak(1, 1);
-        Book book = new Book(8, 8);
-        Exit exit = new Exit(7, 7);
-        Cat cat = new Cat(1, 4);
 
         return new Game(harry, filch, cat, book, cloak, exit);
     }
