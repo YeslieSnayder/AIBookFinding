@@ -69,7 +69,7 @@ public class Game {
             System.out.println("Number of steps: " + (path.length - 1));
             System.out.println("Path: " + pathToString(path));
             draw(path);
-            System.out.println("Time: " + time + "ms");
+            System.out.println("Time: " + time + " ms");
         } catch (NoPathException e) {
             System.out.println("Lose!");
         }
