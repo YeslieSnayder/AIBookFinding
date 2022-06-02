@@ -88,7 +88,7 @@ Algorithms uses the following priority for cells to check availability to step o
 
 The distance to each cell (including diagonal) is $1$. Therefore, due to priority and the distance for movement, the best path may be displayed oddly.
 
-![algorithm_description.jpeg](Book%20finding%204365f1fe66ee4e24973da49371520d93/6B1DD539-F86A-4EBC-AE54-738A0B9D9C9B.jpeg)
+![algorithm_description.jpeg](https://github.com/YeslieSnayder/AIBookFinding/blob/master/images/Visible_path.jpeg)
 
 ## Backtracking (improved)
 
@@ -131,7 +131,7 @@ How to calculate priority for:
 
 If there are several cells with equal priority, then Harry chooses the first cell on clockwise position. For example, on a picture Harry chose the bottom cell.
 
-![movement_directions.jpeg](Book%20finding%204365f1fe66ee4e24973da49371520d93/BB91DE46-3552-423C-A77E-3FEF8E90D409.jpeg)
+![movement_directions.jpeg](https://github.com/YeslieSnayder/AIBookFinding/blob/master/images/Movement_directions.jpeg)
 
 # Statistics
 
